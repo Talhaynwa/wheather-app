@@ -1,11 +1,10 @@
 import { useState } from "react";
-
 import styled from "@emotion/styled";
 import { Box, InputBase, Button } from "@mui/material";
 import { getweather } from "../services/api";
 
 const Container = styled(Box)({
-  background: "#445A6F",
+  background: "#1974D2",
   padding: 10,
 });
 

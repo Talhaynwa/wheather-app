@@ -8,6 +8,7 @@ import {
   Dehaze,
   Cloud,
 } from "@mui/icons-material";
+import { green } from "@mui/material/colors";
 
 const Row = styled(Typography)({
   padding: 10,
@@ -26,7 +27,17 @@ const Error = styled(Typography)({
 
 const Information = ({ result }) => {
   return result && Object.keys(result).length > 0 ? (
-    <Box style={{ margin: "30px 60px" }}>
+    <Box
+      style={{
+        margin: "30px 60px",
+        background: "lightgreen",
+        display: "flex",
+        alignItems: "start",
+        justifyContent: "space-between",
+        flexDirection: "column",
+        borderRadius: "15px",
+      }}
+    >
       <Row>
         <LocationOn />
         Location: {result.name}, {result.sys.country}
