@@ -11,6 +11,9 @@ import {
 import { green } from "@mui/material/colors";
 
 const Row = styled(Typography)({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-around",
   padding: 10,
   fontSize: 20,
   letterSpacing: 2,
@@ -44,12 +47,12 @@ const Information = ({ result }) => {
       </Row>
       <Row>
         <SettingsBrightness />
-        Temperature: {result.main.temp}
+        Temperature: {result.main.temp}°C
       </Row>
       <Row>
         <Opacity />
         Humidity:
-        {result.main.humidity}
+        {result.main.humidity}%
       </Row>
       <Row>
         <Brightness5 />
@@ -61,7 +64,7 @@ const Information = ({ result }) => {
       </Row>
       <Row>
         <Dehaze />
-        Humidity: {result.weather[0].main}
+        Climate: {result.weather[0].main}
       </Row>
       <Row>
         <Cloud />
